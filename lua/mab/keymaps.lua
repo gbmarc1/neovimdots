@@ -1,3 +1,8 @@
+local opts = {noremap = true, silent = true}
+
+-- shorthand
+local keymap = vim.api.nvim_set_keymap
+
 -- Modes:
 --     normal_mode = "n"
 --     insert_mode = "i"

@@ -45,6 +45,12 @@ return packer.startup(function(use)
   use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
   use 'nvim-lua/plenary.nvim' -- Useful lua functions used by lots of plugins
 
+  -- Telescope
+-- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false , hidden = true }))<cr>", opts)
+keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
+
   -- nvim tree
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'

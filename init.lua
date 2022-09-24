@@ -1,3 +1,4 @@
+require "mab.telescope"
 require "mab.options"
 require "mab.nvim-tree"
 require "mab.plugins"

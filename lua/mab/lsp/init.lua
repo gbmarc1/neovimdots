@@ -4,6 +4,6 @@ if not status_ok then
     return
 end
 
-require("yue.lsp.lsp-installer")
-require("yue.lsp.handlers").setup()
-require("yue.lsp.null-ls")
+require("mab.lsp.lsp-installer")
+require("mab.lsp.handlers").setup()
+require("mab.lsp.null-ls")

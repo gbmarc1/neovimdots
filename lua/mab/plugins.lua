@@ -47,7 +47,16 @@ return packer.startup(function(use)
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
-  
+
+  -- Completion
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+  use 'saadparwaiz1/cmp_luasnip'    -- snippet completion
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-nvim-lua'
+
   -- nvim tree
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'

@@ -48,6 +48,12 @@ return packer.startup(function(use)
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
 
+    -- doc
+  use {
+    'danymat/neogen',
+     requires = {'nvim-treesitter/nvim-treesitter'}
+
+  }
   -- Completion
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -60,7 +66,12 @@ return packer.startup(function(use)
   -- nvim tree
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
- 
+
+  -- Treesitter
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+  }
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'

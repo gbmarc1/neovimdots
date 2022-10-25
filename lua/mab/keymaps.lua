@@ -24,3 +24,8 @@ keymap("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
 
 -- Doc
 keymap("n", "<leader>df", "<cmd>lua require('neogen').generate({ type = 'func' })<cr>", opts)
+
+-- VISUAL --
+--
+-- stop yanking on paste in visual mode
+keymap("v", "p", '"_dP', opts)

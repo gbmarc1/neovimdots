@@ -11,7 +11,11 @@ telescope.setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
-
+    layout_strategy = 'vertical',
+    layout_config = {
+        height = 0.99,
+        width = 0.99,
+    },
     vimgrep_arguments = {
       "rg",
       "--color=never",

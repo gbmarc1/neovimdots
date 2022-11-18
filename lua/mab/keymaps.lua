@@ -29,3 +29,19 @@ keymap("n", "<leader>df", "<cmd>lua require('neogen').generate({ type = 'func' }
 --
 -- stop yanking on paste in visual mode
 keymap("v", "p", '"_dP', opts)
+
+-- Vimspector
+keymap("n", "<leader>vG", "<cmd>lua require('mab.vimspector').generate_debug_profile()<cr>", opts)
+keymap("n", "<leader>vI", "<cmd>VimspectorInstall<cr>", opts)
+keymap("n", "<leader>vU", "<cmd>VimspectorUpdate<cr>", opts)
+keymap("n", "<leader>vR", "<cmd>call vimspector#RunToCursor()<cr>", opts)
+keymap("n", "<leader>vc", "<cmd>call vimspector#Continue()<cr>", opts)
+keymap("n", "<leader>vi", "<cmd>call vimspector#StepInto()<cr>", opts)
+keymap("n", "<leader>vo", "<cmd>call vimspector#StepOver()<cr>", opts)
+keymap("n", "<leader>vs", "<cmd>call vimspector#Launch()<cr>", opts)
+keymap("n", "<leader>vt", "<cmd>call vimspector#ToggleBreakpoint()<cr>", opts)
+keymap("n", "<leader>vu", "<cmd>call vimspector#StepOut()<cr>", opts)
+keymap("n", "<leader>vS", "<cmd>call vimspector#Stop()<cr>", opts)
+keymap("n", "<leader>vr", "<cmd>call vimspector#Restart()<cr>", opts)
+keymap("n", "<leader>vx", "<cmd>VimspectorReset<cr>", opts)
+keymap("n", "<leader>vH", "<cmd>lua require('mab.vimspector').toggle_human_mode()<cr>", opts)

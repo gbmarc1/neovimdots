@@ -38,6 +38,7 @@ packer.init {
   },
 }
 
+require("mab.vimspector").setup()
 -- Install your plugins here
 return packer.startup(function(use)
   -- Base
@@ -67,7 +68,8 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'kyazdani42/nvim-tree.lua'
 
-  -- Treesitter
+    -- Treesitter
+
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
@@ -76,7 +78,21 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use "jose-elias-alvarez/null-ls.nvim" -- formatters and linters
-  
+
+  -- snippets
+  use 'L3MON4D3/LuaSnip'            -- snippet engine
+  use 'rafamadriz/friendly-snippets'
+
+  -- vimspector
+  use {
+    'puremourning/vimspector',
+    cmd = { "VimspectorInstall", "VimspectorUpdate" },
+    fn = { "vimspector#Launch()", "vimspector#ToggleBreakpoint", "vimspector#Continue" },
+    config = function()
+      require("mab.vimspector").setup()
+    end
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

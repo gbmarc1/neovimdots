@@ -4,7 +4,7 @@ local o = vim.opt
 -- NVIM OPTIONS
 o.backup = false			              -- creates a backup file
 o.fileencoding = "utf-8"                  -- encoding yup
-o.completeopt = { "menuone", "noselect" } -- menuone: popup menu even when only one match
+o.completeopt = { "menuone", "noselect", "menu" } -- menuone: popup menu even when only one match
                                           -- noselect: force user to select from menu
 o.clipboard = "unnamedplus"	              -- allows nvim to access sysyem clipboard
 o.relativenumber = true		              -- show relative line numbers
@@ -32,3 +32,4 @@ o.scrolloff = 8                           -- have a few lines before reaching ed
 o.sidescrolloff = 8                       -- same for sidescroll
 
 vim.cmd [[set iskeyword+=-]]              -- let - be part of "words"
+vim.lsp.set_log_level("debug")
